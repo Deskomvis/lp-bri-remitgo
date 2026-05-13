@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  
+  /* Consistent Fintech Blue Palette - BRI Official Core with Digital Polish */
+  --color-brand-blue: #00529C;     /* BRI Primary Blue */
+  --color-brand-dark: #002D58;     /* Deep Navy for Trust */
+  --color-brand-accent: #0061FF;   /* Vibrant Accent Blue */
+  --color-brand-orange: #F9B52B;   /* Solid Orange for UI */
+  --color-brand-orange-text: #DB741A; /* Darker Orange for Text Contrast */
+  --color-brand-secondary: #2086EE; /* BRI Secondary Blue */
+  --color-brand-light: #F6F9FC;    /* Clean Background */
+  
+  --animate-float: float 8s ease-in-out infinite;
+  --animate-pulse-slow: pulse 12s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-mesh: mesh 20s ease infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-30px) rotate(2deg); }
+}
+
+@keyframes mesh {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+  
+  body {
+    @apply font-sans antialiased bg-brand-light text-slate-700 leading-relaxed relative;
+  }
+  
+  body::before {
+    content: "";
+    @apply absolute inset-0 opacity-[0.03] pointer-events-none z-[9999];
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  }
+  
+  h1 { @apply font-display font-black text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-[-0.04em] text-brand-dark; }
+  h2 { @apply font-display font-black text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-0.03em] text-brand-dark; }
+  h3 { @apply font-display font-black text-xl md:text-3xl lg:text-4xl leading-[1.2] tracking-[-0.02em] text-brand-dark; }
+  h4 { @apply font-display font-bold text-xl md:text-2xl tracking-tight text-brand-dark; }
+  
+  p { @apply text-base md:text-lg lg:text-xl text-slate-500 leading-relaxed font-medium; }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-[1440px] mx-auto px-8 md:px-20;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-3xl border border-white/50 shadow-[0_40px_80px_-20px_rgba(0,45,88,0.08)] transition-all duration-700;
+  }
+
+  .glass-dark {
+    @apply bg-brand-dark/40 backdrop-blur-3xl border border-white/10 shadow-2xl;
+  }
+
+  .bri-gradient {
+    @apply bg-brand-dark relative overflow-hidden;
+  }
+
+  .btn-primary {
+    @apply bg-brand-blue text-white px-10 py-5 rounded-full font-black text-lg transition-all hover:bg-brand-accent hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(0,97,255,0.3)] active:scale-95 flex items-center justify-center gap-3 outline-none;
+  }
+
+  .btn-store {
+    @apply flex items-center gap-4 bg-brand-dark text-white px-8 py-5 rounded-2xl font-black text-lg shadow-xl transition-all hover:-translate-y-1 hover:bg-brand-blue active:scale-95 outline-none;
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
