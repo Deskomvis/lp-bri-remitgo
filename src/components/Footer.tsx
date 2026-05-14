@@ -21,7 +21,7 @@ const Footer = () => (
           <div className="mb-10">
             <h4 className="text-blue-100 font-black text-sm uppercase tracking-widest mb-4">BRI Global Financial Services</h4>
             <p className="text-slate-400 text-lg leading-relaxed font-medium">
-              Memberdayakan Sahabat PMI Hong Kong melalui solusi finansial yang modern, aman, dan terpercaya.
+              remit.go! adalah aplikasi mobile yang dirancang khusus untuk memudahkan Pekerja Migran Indonesia (PMI) di Hong Kong dalam melakukan transaksi keuangan ke Indonesia — cepat, aman, dan praktis langsung dari genggaman tangan Anda.
             </p>
           </div>
           <div className="flex gap-4">
