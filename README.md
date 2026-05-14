@@ -1,20 +1,44 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <img src="/public/logo.png" alt="remit.go! logo" width="120" height="auto" style="border-radius: 24px" />
+  <h1>remit.go!</h1>
+  <p>Landing page for remit.go! - Solusi Finansial Modern untuk Pekerja Migran Indonesia di Hong Kong.</p>
 </div>
 
-# Run and deploy your AI Studio app
+---
 
-This contains everything you need to run your app locally.
+## 🚀 Overview
+**remit.go!** adalah aplikasi mobile yang dirancang khusus untuk memudahkan Pekerja Migran Indonesia (PMI) di Hong Kong dalam melakukan transaksi keuangan ke Indonesia — cepat, aman, dan praktis langsung dari genggaman tangan Anda.
 
-View your app in AI Studio: https://ai.studio/apps/58ff95bc-3445-4f8a-b6dc-f70fe06c4c34
+## 🛠️ Tech Stack
+- **Framework:** React + Vite
+- **Styling:** Vanilla CSS + TailwindCSS (Optional for utilities)
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
 
-## Run Locally
+## 📦 Getting Started
 
-**Prerequisites:**  Node.js
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v18 or later recommended)
 
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Deskomvis/lp-bri-remitgo.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🏗️ Production Build
+To create a production-ready bundle:
+```bash
+npm run build
+```
+
+---
+© 2024 BRI Global Financial Services. Global Standard Fintech.
